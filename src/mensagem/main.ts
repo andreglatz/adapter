@@ -18,12 +18,12 @@ class Adapter implements Target {
   }
   
   public mensagem(): string {
-    const mensagem = this.adaptee.dizerOla();
+    const mensagem: string = this.adaptee.dizerOla();
     return `Adapter: ${mensagem}`;
   }
 
   public mensagemReversa(): string {
-    const mensagem = this.adaptee.dizerOla().split('').reverse().join('');
+    const mensagem: string = this.adaptee.dizerOla().split('').reverse().join('');
     return `Adapter: ${mensagem}`;
   }
   
@@ -37,17 +37,19 @@ class Client {
   }
 
   public imprimirMensage() {
-    console.log(this.adapter.mensagem());
+    const mensagem: string = this.adapter.mensagem();
+    console.log(mensagem);
   }
 
   public imprimirMensageReversa() {
-    console.log(this.adapter.mensagemReversa());
+    const mensagem: string = this.adapter.mensagemReversa();
+    console.log(mensagem);
   }
 }
 
 const adaptee: Adaptee = new Adaptee()
 const adapter: Target = new Adapter(adaptee); 
-const client = new Client(adapter);
+const client: Client = new Client(adapter);
 
 client.imprimirMensage();
 client.imprimirMensageReversa();

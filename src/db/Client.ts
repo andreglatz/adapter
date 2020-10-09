@@ -29,10 +29,12 @@ export class Client {
   }
 
   public imprimirTodos(): void {
-    const elementos = this.selecionarTodos();
+    const elementos: number[] = this.selecionarTodos();
+    
     for (let index = 0; index < elementos.length; index++) {
-      const element = elementos[index];
+      const element: number = elementos[index];
       console.log(element);
     }
+    
   }
 }
