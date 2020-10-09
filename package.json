@@ -1,0 +1,15 @@
+{
+  "name": "adapter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "André Glatz <andreglatz@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start:mensagem": "node ./dist/mensagem/main.js",
+    "start:db": "node ./dist/db/main.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  }
+}
